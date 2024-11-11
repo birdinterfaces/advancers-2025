@@ -22,6 +22,10 @@ async function processHtmlFiles(directory) {
       // Replace .html in anchor tags that use relative paths
       content = content.replace(/href='([^']+)\.html'/g, "href='$1'");
       
+      // Replace index.html in href attributes
+      content = content.replace(/href="([^"]*?)index"/g, 'href="$1/"');
+      content = content.replace(/href='([^']*?)index'/g, "href='$1/'");
+      
       await writeFile(fullPath, content);
       console.log(`Processed: ${fullPath}`);
     }
