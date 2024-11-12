@@ -3,8 +3,7 @@ const nextConfig = {
   output: 'standalone',
   skipTrailingSlashRedirect: true,
   skipMiddlewareUrlNormalize: true,
-  unstable_runtimeJS: false,
-  unstable_noHTML: true,
+  trailingSlash: false,
   async rewrites() {
     return [
       {
@@ -29,6 +28,20 @@ const nextConfig = {
         ],
       },
     ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+    ];
   },
 }
 
