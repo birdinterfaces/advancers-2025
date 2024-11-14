@@ -40,7 +40,7 @@
         <a href="../knowledge" class="linksidebar menuitems w-inline-block"><img src="../images/Untitled-11.png" loading="eager" alt="" class="coursesside">
           <div class="text-block-15 coursestext coursebold">Knowledge</div>
         </a>
-        <a href="http://advancers.ai/login" target="_blank" class="linksidebar menuitems w-inline-block"><img src="../images/CPU.png" loading="eager" alt="" class="coursesside forum ais">
+        <a href="http://advancers.ai/login" target="_blank" class="linksidebar menuitems w-inline-block"><img src="../images/file.png" loading="eager" alt="" class="coursesside forum ais">
           <div class="text-block-15 aitext">AI</div>
         </a>
         <a href="#" class="linksidebar menuitems w-inline-block"><img src="../images/Vector_6.png" loading="eager" alt="" class="coursesside forum ais bird mobiledrop">
@@ -54,10 +54,10 @@
     </div>
   </div>
   <div class="sidebardivs">
-    <div id="w-node-_3dcdc439-a2aa-068f-49a4-58504b97ca32-588c8943" data-animation="default" data-collapse="tiny" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbarplatformside course6vh w-nav">
-      <div id="w-node-_3dcdc439-a2aa-068f-49a4-58504b97ca33-588c8943" class="container-3 w-container">
+    <div id="w-node-b7655e20-a28e-8cf3-da82-860d53c60ac2-588c8943" data-animation="default" data-collapse="tiny" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbarplatformside course6vh invideo w-nav">
+      <div id="w-node-b7655e20-a28e-8cf3-da82-860d53c60ac3-588c8943" class="container-3 w-container">
         <nav role="navigation" class="nav-menu-3 w-nav-menu">
-          <a href="../" class="linksidebar w-inline-block"><img src="../images/icons8-t-65b-x-wing-starfighter-96.png" loading="lazy" alt="" class="coursesside homeicon">
+          <a href="../" class="linksidebar w-inline-block"><img src="../images/Home-Icon.svg" loading="lazy" alt="" class="coursesside homeicon">
             <div class="text-block-15 coursestext boldtexthome">Home</div>
           </a>
           <a href="../knowledge" class="linksidebar w-inline-block"><img src="../images/Untitled-11.png" loading="lazy" alt="" class="coursesside rocketadjustment">
@@ -66,7 +66,7 @@
           <a href="http://advancers.ai/login" target="_blank" class="linksidebar aisidebarbutton w-inline-block"><img src="../images/file.png" loading="lazy" alt="" class="coursesside forum ais">
             <div class="text-block-15 aitext">AI</div>
           </a>
-        <a href="http://advancers.ai/login" class="linksidebar w-inline-block"><img src="../images/Vector_6.png" loading="eager" alt="" class="coursesside forum ais bird">
+          <a href="#" class="linksidebar w-inline-block"><img src="../images/Vector_6.png" loading="eager" alt="" class="coursesside forum ais bird">
             <div class="text-block-15 aitext bird">Bird</div>
             <div class="text-block-16">Soon</div>
           </a>
@@ -75,7 +75,7 @@
           <div class="w-icon-nav-menu"></div>
         </div>
       </div>
-      <div id="user-button" class="user-button w-node-_3dcdc439-a2aa-068f-49a4-58504b97ca4d-588c8943"></div>
+      <div id="user-button" class="user-button w-node-b7655e20-a28e-8cf3-da82-860d53c60ac4-588c8943"></div>
     </div>
     <div id="w-node-beb0b169-38ce-5e6b-d77e-228a6f2d4de0-588c8943" class="section librarypreview pplatformcourses">
       <div class="container librarycontainer platformcourse">
@@ -732,5 +732,53 @@
   });
 </script><!--  [Attributes by True Media Player] Audio Player Plugin  -->
   <script src="https://trueaudioplayer.b-cdn.net/true-audio-player@1.1.1.min.js" type="text/javascript"></script>
+  <script>
+  // Preload the next page content
+  function preloadPage(url) {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  }
+
+  // Update sidebar highlight and preload next page
+  function updateSidebarHighlight() {
+    const currentPath = window.location.pathname;
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+    sidebarLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+      } else {
+        preloadPage(link.getAttribute('href')); // Preload other pages
+      }
+    });
+  }
+
+  // Call it immediately when page loads
+  document.addEventListener('DOMContentLoaded', updateSidebarHighlight);
+</script>
+  <style>
+    .sidebar {
+      position: fixed; /* Keep the sidebar fixed */
+      top: 0; /* Align to the top */
+      left: 0; /* Align to the left */
+      height: 100%; /* Full height */
+      width: 240px; /* Fixed width */
+      overflow-y: auto; /* Allow scrolling if content overflows */
+      transition: transform 0.3s ease; /* Smooth transition for any transform changes */
+    }
+
+    .sidebar a {
+      display: block; /* Ensure links are block elements */
+      padding: 10px; /* Add padding for better click area */
+      transition: background-color 0.2s ease, color 0.2s ease; /* Smooth color transitions */
+    }
+
+    .sidebar a.active {
+      background-color: #f0f0f0; /* Highlight active link */
+    }
+  </style>
 </body>
 </html>
