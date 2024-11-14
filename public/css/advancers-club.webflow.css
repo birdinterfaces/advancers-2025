@@ -9329,6 +9329,13 @@ figcaption {
     padding-right: 0;
   }
 
+  .section.librarypreview.pplatformcourses.removemargins {
+    margin-left: 0vh;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .section.librarypreview.pplatformcourses.invideo {
     margin-left: 0;
     margin-right: 0;
