@@ -6206,7 +6206,7 @@ figcaption {
 
 .librarycard1 {
   background-color: #090a0a;
-  border: 1px solid #303b4b96;
+  border: 0px solid #303b4b96;
   border-radius: 8px;
   width: 100%;
   margin-top: 40px;
@@ -6422,8 +6422,9 @@ figcaption {
 }
 
 .card1.previewcard {
-  background-color: #000;
-  border: 2px #fff;
+  background-color: #090a0a;
+  border: 1px solid #303b4b96;
+  border-radius: 8px;
 }
 
 .card1.whitecard {
