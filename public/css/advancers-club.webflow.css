@@ -6427,6 +6427,10 @@ figcaption {
   border-radius: 8px;
 }
 
+.card1.previewcard:hover {
+  background-color: #0f1111;
+}
+
 .card1.whitecard {
   border-width: 1px;
   border-color: #d1d1d1;
