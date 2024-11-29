@@ -9929,7 +9929,7 @@ figcaption {
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
     margin-top: 0;
-    margin-bottom: 140px;
+    margin-bottom: 0px;
     display: grid;
   }
 
