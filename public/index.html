@@ -23,7 +23,7 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GR4PEECWG6"></script>
   <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-GR4PEECWG6');</script>
-  <script async="" crossorigin="anonymous" data-clerk-publishable-key="pk_live_Y2xlcmsuYWR2YW5jZXJzLm9yZyQ" src="https://clerk.advancers.org/npm/@clerk/clerk-js@4/dist/clerk.browser.js" type="text/javascript">
+  <script async="" crossorigin="anonymous" data-clerk-publishable-key="pk_live_Y2xlcmsuYWR2YW5jZXJzLm9yZyQ" src="https://clerk.advancers.org/npm/@clerk/clerk-js@4/dist/clerk.browser.js" type="text/javascript"></script>
   <script>
     if (window.location.pathname === '/index') {
       window.location.href = '/';
@@ -44,6 +44,206 @@
     .seperator1:last-of-type {
       border-bottom: none;
     }
+    
+    @media screen and (max-width: 767px) {
+      .forumdivmain-copy.birdinte {
+        text-align: left !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+      }
+      .forumdivmain-copy.birdinte .text-block-24 {
+        text-align: left !important;
+      }
+    }
+
+    /* Fix sidebar flickering by hiding it initially and showing it after load */
+    .sidebardivs {
+      opacity: 0;
+      transition: opacity 0.1s ease-in;
+    }
+    
+    .sidebardivs.loaded {
+      opacity: 1;
+    }
+
+    /* Desktop icon sizes - make Home, Philosophy, Intelligence smaller */
+    @media screen and (min-width: 768px) {
+      .coursesside.homeicon,
+      .coursesside.rocketadjustment {
+        width: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+      }
+      
+      .coursesside.forum.ais:not(.bird) {
+        width: 25px !important;
+        min-width: 25px !important;
+        max-width: 25px !important;
+      }
+      
+      .coursesside.forum.ais.bird {
+        width: 24px !important;
+        min-width: 24px !important;
+        max-width: 24px !important;
+      }
+    }
+
+    /* Mobile icon sizes */
+    @media screen and (max-width: 767px) {
+      /* For desktop sidebar icons if displayed on mobile (Home, Philosophy) */
+      .coursesside.homeicon,
+      .coursesside.rocketadjustment {
+        width: 14px !important; 
+        min-width: 14px !important;
+        max-width: 14px !important;
+      }
+
+      /* For icons in the main mobile navigation menu */
+      nav.mobilemenu img.coursesside.home,
+      nav.mobilemenu a[href="philosophy"] img.coursesside {
+        width: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+        height: auto !important;
+      }
+
+      nav.mobilemenu a[href*="advancers.ai"] img.coursesside,
+      nav.mobilemenu a[href*="birdinterface.com"] img.coursesside {
+        width: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+        height: auto !important;
+      }
+    }
+
+    /* Hover effects for sidebar links */
+    .linksidebar .text-block-15,
+    .linksidebar .text-block-15.coursestext,
+    .linksidebar .text-block-15.aitext {
+      color: #999 !important;
+      transition: color 0.2s ease;
+    }
+
+    .linksidebar:hover .text-block-15,
+    .linksidebar:hover .text-block-15.coursestext,
+    .linksidebar:hover .text-block-15.aitext {
+      color: #fff !important;
+    }
+
+    .linksidebar.w--current .text-block-15,
+    .linksidebar.w--current .text-block-15.coursestext,
+    .linksidebar.w--current .text-block-15.aitext {
+      color: #fff !important;
+    }
+
+    /* Make Home text less bold when selected */
+    .linksidebar.w--current .text-block-15 {
+      font-weight: 700 !important;
+    }
+
+    /* Ensure "Home" with vboldc class is bold in current mobile menu item */
+    nav.mobilemenu a.linksidebar[href="index"][aria-current="page"] .text-block-15.vboldc {
+      font-weight: 700 !important;
+    }
+
+    /* Fix text alignment for Philosophy and Birdinterface */
+    .coursesside.rocketadjustment {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    
+    .coursesside.forum.ais.bird {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-top: 0 !important;
+    }
+    
+    /* .text-block-15.aitext.bird {
+      margin-left: 0 !important;
+    } */
+
+    /* Override the negative margin from .coursesside.forum.ais for bird icon */
+    .coursesside.forum.ais.bird {
+      margin-left: 0 !important;
+      /* padding-left: 0 !important; */
+    }
+
+    /* Ensure all sidebar icons have consistent spacing */
+    .coursesside {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    /* Align Birdinterface text in desktop sidebar */
+    @media screen and (min-width: 768px) {
+      .linksidebar a[href*="birdinterface.com"] .text-block-15.aitext.bird {
+        /* Adjust this value as needed. This attempts to counteract any parent negative margins */
+        /* It might be better to identify the source of the negative margin on the icon/link and neutralize it there */
+         margin-left: 0px !important; /* Example: try to remove any specific bird text margin */
+      }
+      /* More general rule if specific text block has an unwanted default margin */
+      .linksidebar .text-block-15.aitext.bird {
+          /* General alignment if the icon itself is aligned via .coursesside */
+      }
+    }
+
+    /* Make sidebar text more bold like text-block-24 */
+    .text-block-15,
+    .text-block-15.coursestext,
+    .text-block-15.aitext {
+      font-weight: 500 !important;
+    }
+
+    /* Remove card outlines on homepage */
+    .power-feature-card-container,
+    .break-down-card,
+    .tab-link,
+    .testimonail-slider-container,
+    .job-position-wrapper,
+    .ai-part,
+    .aimiddle {
+      border: none !important;
+    }
+
+    /* Remove sidebar item borders and backgrounds to prevent flickering */
+    .linksidebar,
+    .linksidebar:hover,
+    .linksidebar.w--current {
+      border: none !important;
+      background: none !important;
+      background-color: transparent !important;
+    }
+
+    /* Center-left alignment for AI description text on mobile */
+    @media screen and (max-width: 767px) {
+      .text-block-24 {
+        text-align: left !important;
+      }
+    }
+
+    /* Hide top-left logo on desktop */
+    @media screen and (min-width: 992px) {
+      .platformsectiontop > .platformtop.home {
+        display: none !important;
+      }
+    }
+
+    /* Hide top-left logo on tablets */
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .platformsectiontop > .platformtop.home {
+        display: none !important;
+      }
+    }
+
+    /* Ensure current page text is bold */
+    .linksidebar.w--current .text-block-15 { 
+      font-weight: 700 !important; 
+    }
+
+    /* Ensure "Home" with vboldc class is bold in current mobile menu item */
+    nav.mobilemenu .linksidebar.w--current .text-block-15.vboldc {
+      font-weight: 700 !important;
+    }
   </style>
 </head>
 <body class="body-2">
@@ -58,8 +258,8 @@
         <a href="index" aria-current="page" class="linksidebar mobilenav menuitems w-inline-block w--current"><img src="images/icons8-t-65b-x-wing-starfighter-96-1.png" loading="eager" alt="" class="coursesside home">
           <div class="text-block-15 coursestext vboldc">Home</div>
         </a>
-        <a href="knowledge" class="linksidebar menuitems w-inline-block"><img src="images/Vector_4.png" loading="eager" alt="" class="coursesside">
-          <div class="text-block-15 coursestext">Knowledge</div>
+        <a href="philosophy" class="linksidebar menuitems w-inline-block"><img src="images/Vector_4.png" loading="eager" alt="" class="coursesside">
+          <div class="text-block-15 coursestext">Philosophy</div>
         </a>
         <a href="https://advancers.ai/login" target="_blank" class="linksidebar menuitems w-inline-block"><img src="images/file.png" loading="eager" alt="" class="coursesside forum ais">
           <div class="text-block-15">Intelligence</div>
@@ -80,8 +280,8 @@
           <a href="/" aria-current="page" class="linksidebar w-inline-block w--current"><img src="images/icons8-t-65b-x-wing-starfighter-96-1.png" loading="eager" alt="" class="coursesside homeicon">
             <div class="text-block-15 coursestext boldtexthome vbold">Home</div>
           </a>
-          <a href="knowledge" class="linksidebar mobilenav menuitems w-inline-block"><img src="images/Vector_4.png" loading="eager" alt="" class="coursesside rocketadjustment">
-            <div class="text-block-15 coursestext">Knowledge</div>
+          <a href="philosophy" class="linksidebar mobilenav menuitems w-inline-block"><img src="images/Vector_4.png" loading="eager" alt="" class="coursesside rocketadjustment">
+            <div class="text-block-15 coursestext">Philosophy</div>
           </a>
           <a href="https://advancers.ai/login" target="_blank" class="linksidebar aisidebarbutton w-inline-block"><img src="images/file.png" loading="eager" alt="" class="coursesside forum ais">
             <div class="text-block-15 aitext">Intelligence</div>
@@ -101,15 +301,6 @@
         <div class="toppart">
         </div>
         <div class="platformcoursesgrid">
-          <div class="librarycard">
-            <div class="cardtop"><img src="images/Future-City.PNG" loading="eager" sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 1279px) 115.015625px, (max-width: 1439px) 12vw, 19vw" srcset="images/Future-City-p-500.png 500w, images/Future-City-p-800.png 800w, images/Future-City-p-1080.png 1080w, images/Future-City.PNG 1140w" alt="" class="image-3 platform"></div>
-            <div class="cardbottom">
-              <div class="textblockbottom librarycards">
-                <div class="titlecard platform">The Advancers Philosophy</div>
-              </div>
-              <a href="knowledge/philosophy" class="button navbar-button library-button platform w-button">View</a>
-            </div>
-          </div>
         
         </div>
         <div class="ai-part">
@@ -119,23 +310,7 @@
             </div>
             <div class="forumdivmain-copy">
               <div class="textblockbottom">
-                <div class="textcard platform aitext">AI with The Advancers Philosophy in its core.</div>
-                <div class="seperator1">
-                  <div class="lefttitles">
-                    <div class="lefttitle"><strong>Fuels curiosity</strong></div>
-                  </div>
-                  <div class="rightdescs">
-                    <div class="rightdesc">Provides the most accurate answers based on the latest scientific understanding</div>
-                  </div>
-                </div>
-                <div class="seperator1">
-                  <div class="lefttitles">
-                    <div class="lefttitle"><strong>Empowers</strong></div>
-                  </div>
-                  <div class="rightdescs">
-                    <div class="rightdesc">Enables anyone to become an Advancer and embrace our infinite creativity</div>
-                  </div>
-                </div>
+                <div class="text-block-24">The most aligned AI for advancing knowledge and civilization.</div>
               </div>
             </div>
             <a data-w-id="cf407abc-852d-6160-2c24-c4a5420c70c9" href="http://advancers.ai/welcome" target="_blank" class="aiwebsite w-inline-block">
@@ -146,10 +321,233 @@
         <div class="ai-part">
           <div class="aimiddle">
             <div class="toptitleforum">
-              <div class="text-block-23">Birdinterface</div>
+              <img src="images/Birdwhite.png" loading="eager" alt="" class="image-11" style="filter: none;">
+              <div class="text-block-33"><strong class="bold-text-20">Birdinterface</strong></div>
             </div>
-            <div class="forumdivmain-copy birdinte">
-              <div class="text-block-24">Coming soon</div>
+            <div class="forumdivmain-copy birdinte" style="text-align: left; justify-content: flex-start; align-items: flex-start;">
+              <div class="text-block-24" style="text-align: left;">Store and manage your most important data in one place. Built from the bottom up for AI. Coming soon.</div>
+            </div>
+          </div>
+        </div>
+        <div class="audio-section" style="margin: 40px 0; padding: 20px 0; min-height: 200px; display: flex; flex-direction: column; justify-content: center; width: 100%;">
+          <div style="text-align: left; margin-bottom: 20px;">
+            <div class="text-block-33"><strong class="bold-text-20">Listen to The Advancers Philosophy on the go</strong></div>
+          </div>
+          <div class="audios" style="display: block;">
+            <div class="audio11" style="width: 100%;">
+              <div class="audiotrack" style="width: 100%;">
+                <div tmplayer-init="true" class="audiotrackvideostap" style="width: 100%;">
+                  <div class="html-embed-10 w-embed w-script"><!--  [Attributes by True Media Player] Audio Player Plugin  -->
+                        <script src="https://trueaudioplayer.b-cdn.net/true-audio-player@1.1.1.min.js" type="text/javascript"></script>
+                        <!--  Audio Player HTML Structure  -->
+                        <div id="player1" tmplayer-init="true" class="sp-track-wrapper is-paused">
+                          <div class="sp-track">
+                            <div class="sp-controla-wrapper">
+                              <!--  Play/Pause Button  -->
+                              <button id="playPauseButton" class="sp-play-pause-button">
+                                <img id="playIcon" src="https://assets-global.website-files.com/65573c446874868ee0fa68b5/65b956f929dc6346803c61e2_play-button.webp" tmplayer-button="play" alt="" class="sp-play">
+                                <img id="pauseIcon" src="https://assets-global.website-files.com/65573c446874868ee0fa68b5/65b95581843336ede761a84b_Stop_fill.svg" tmplayer-button="pause" alt="" class="sp-pause" style="display: none;">
+                              </button>
+                              <!--  Progress Bar and Time  -->
+                              <div class="sp-media-player-bar-wrapper">
+                                <div tmplayer-element="progress-bar-wrapper" class="sp-progress-bar-wrapper">
+                                  <div class="sp-progress-bar-background">
+                                    <div id="progressBar" tmplayer-element="progress-bar" class="progress-bar" style="width: 0%;">
+                                      <div class="true-progress-head"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sp-time-wrapper">
+                                  <div tmplayer-element="elapsed" id="currentTime" class="sp-elapsed">0:00</div>
+                                  <div>&nbsp;/&nbsp;</div>
+                                  <div tmplayer-element="duration" id="duration" class="sp-duration">0:00</div>
+                                </div>
+                                <!--  Playback Speed Control  -->
+                                <div class="sp-playback-speed">
+                                  <select id="playbackRate" style="color: white; background-color: black;">
+                                    <option value="0.5">0.5×</option>
+                                    <option value="0.75">0.75×</option>
+                                    <option value="1" selected="">1×</option>
+                                    <option value="1.25">1.25×</option>
+                                    <option value="1.5">1.5×</option>
+                                    <option value="1.75">1.75×</option>
+                                    <option value="2">2×</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <!--  Audio Element  -->
+                            <audio id="audioPlayer" preload="metadata" style="display: none;">
+                              <source src="https://audio-proxy.vercel.app/api/streamAudio?fileId=CNX9QKG7aWKP5lh8UIAN1cMcR3XdQmoi" type="audio/mpeg">
+                              Your browser does not support the audio element.
+                            </audio>
+                          </div>
+                        </div>
+                        <!--  Additional JavaScript to Handle Player Initialization and Media Session  -->
+                        <script>
+(function() {
+  const playerContainer = document.getElementById('player1');
+  const audioPlayer = document.getElementById('audioPlayer');
+  const playPauseButton = document.getElementById('playPauseButton');
+  const playIcon = document.getElementById('playIcon');
+  const pauseIcon = document.getElementById('pauseIcon');
+  const progressBar = document.getElementById('progressBar');
+  const progressBarBackground = playerContainer.querySelector('.sp-progress-bar-background');
+  const currentTimeElement = document.getElementById('currentTime');
+  const durationElement = document.getElementById('duration');
+  const playbackRateSelector = document.getElementById('playbackRate');
+  // Set initial playback rate
+  audioPlayer.playbackRate = parseFloat(playbackRateSelector.value);
+  // Set Media Session Metadata immediately
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: 'The Advancers Philosophy',
+      artist: 'ADVANCERS',
+      album: 'The Advancers Philosophy',
+      artwork: [
+        {
+          src: 'https://cdn.prod.website-files.com/669a956cb6a32d8d7719ee36/66fef0b24ef79d0cdcc7c2f0_Design%20ohne%20Titel%20(10).png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
+    });
+  }
+  // Update duration once metadata is loaded
+  audioPlayer.addEventListener('loadedmetadata', function() {
+    durationElement.textContent = formatTime(audioPlayer.duration);
+  });
+  // Play or pause audio
+  playPauseButton.addEventListener('click', function() {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+    } else {
+      audioPlayer.pause();
+    }
+  });
+  // Update play/pause icons and pause other players
+  audioPlayer.addEventListener('play', function() {
+    // Pause other audio players
+    const audios = document.querySelectorAll('audio');
+    audios.forEach(function(audio) {
+      if (audio !== audioPlayer) {
+        audio.pause();
+      }
+    });
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = '';
+    playerContainer.classList.remove('is-paused');
+    playerContainer.classList.add('is-playing');
+  });
+  audioPlayer.addEventListener('pause', function() {
+    playIcon.style.display = '';
+    pauseIcon.style.display = 'none';
+    playerContainer.classList.remove('is-playing');
+    playerContainer.classList.add('is-paused');
+  });
+  // Update progress bar and time
+  audioPlayer.addEventListener('timeupdate', function() {
+    const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    progressBar.style.width = percent + '%';
+    currentTimeElement.textContent = formatTime(audioPlayer.currentTime);
+  });
+  // Seek when progress bar is clicked
+  progressBarBackground.addEventListener('click', function(e) {
+    seek(e.clientX);
+  });
+  // Drag to seek functionality
+  let isDragging = false;
+  const seek = (clientX) => {
+    const rect = progressBarBackground.getBoundingClientRect();
+    let offsetX = clientX - rect.left;
+    offsetX = Math.max(0, Math.min(offsetX, rect.width));
+    const percent = offsetX / rect.width;
+    progressBar.style.width = percent * 100 + '%';
+    audioPlayer.currentTime = percent * audioPlayer.duration;
+    currentTimeElement.textContent = formatTime(percent * audioPlayer.duration);
+  };
+  // Mouse Events
+  progressBarBackground.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    seek(e.clientX);
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+      seek(e.clientX);
+    }
+  });
+  document.addEventListener('mouseup', function() {
+    if (isDragging) {
+      isDragging = false;
+    }
+  });
+  // Touch Events
+  progressBarBackground.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    const touch = e.touches[0];
+    seek(touch.clientX);
+    e.preventDefault();
+  });
+  document.addEventListener('touchmove', function(e) {
+    if (isDragging) {
+      const touch = e.touches[0];
+      seek(touch.clientX);
+      e.preventDefault();
+    }
+  });
+  document.addEventListener('touchend', function() {
+    if (isDragging) {
+      isDragging = false;
+    }
+  });
+  // Change playback speed
+  playbackRateSelector.addEventListener('change', function() {
+    audioPlayer.playbackRate = parseFloat(this.value);
+  });
+  // Helper function to format time
+  function formatTime(time) {
+    if (isNaN(time)) return '0:00';
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+    return minutes + ':' + seconds;
+  }
+})();
+</script>
+                        <!--  CSS to Adjust Play Button Position  -->
+                        <style>
+.sp-time-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  white-space: nowrap;
+  padding-right: 10px;
+  padding-left: 12px;
+}
+.sp-progress-bar-background {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-left: 0px;
+}
+.progress-bar {
+  margin: 0;
+}
+.sp-progress-bar-wrapper {
+  margin: 0;
+}
+#playPauseButton {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px dashed transparent;
+  border-radius: 100%;
+  background: transparent;
+  transform: translateX(-8px);
+}
+</style>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
         </div>
@@ -172,6 +570,12 @@
       returnButton.addEventListener('click', function() {
         window.history.back();
       });
+    }
+    
+    // Fix sidebar flickering by adding loaded class
+    var sidebar = document.querySelector('.sidebardivs');
+    if (sidebar) {
+      sidebar.classList.add('loaded');
     }
   });
 </script>

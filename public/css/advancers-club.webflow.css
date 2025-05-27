@@ -7044,7 +7044,7 @@ figcaption {
 }
 
 .linksidebar:hover {
-  background-color: #202327;
+  /* background-color: #202327; */
 }
 
 .linksidebar.w--current {
@@ -7057,9 +7057,9 @@ figcaption {
 }
 
 .linksidebar.w--current:hover {
-  background-color: #202327;
+  /* background-color: #202327;
   border: 1px #000;
-  border-radius: 50px;
+  border-radius: 50px; */
 }
 
 .linksidebar.userpage {

@@ -1,0 +1,782 @@
+<!DOCTYPE html><!--  Last Published: Mon Nov 11 2024 21:13:25 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="66f50c12fa628b53fda7e9b9" data-wf-site="669a956cb6a32d8d7719ee36">
+<head>
+  <meta charset="utf-8">
+  <title>The Advancers Philosophy</title>
+  <meta content="The Advancers Philosophy" property="og:title">
+  <meta content="The Advancers Philosophy" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/advancers-club.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Outfit:100,200,300,regular,500,600,700,800","IBM Plex Sans Hebrew:200,300,regular,500,600"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GR4PEECWG6"></script>
+  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-GR4PEECWG6');</script>
+  <script async="" crossorigin="anonymous" data-clerk-publishable-key="pk_live_Y2xlcmsuYWR2YW5jZXJzLm9yZyQ" src="https://clerk.advancers.org/npm/@clerk/clerk-js@4/dist/clerk.browser.js" type="text/javascript">
+</script>
+  <style>
+    @media screen and (max-width: 479px) {
+      .taptext .lefttitle, .taptext .rightdesc {
+        margin-left: 4vh !important;
+        margin-right: 4vh !important;
+        margin-bottom: 3vh !important;
+      }
+      .taptext .rightdesc:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    
+    .seperator1:last-of-type {
+      border-bottom: none;
+    }
+    
+    @media screen and (max-width: 767px) {
+      .forumdivmain-copy.birdinte {
+        text-align: left !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+      }
+      .forumdivmain-copy.birdinte .text-block-24 {
+        text-align: left !important;
+      }
+    }
+
+    /* Fix sidebar flickering by hiding it initially and showing it after load */
+    .sidebardivs {
+      opacity: 0;
+      transition: opacity 0.1s ease-in;
+    }
+    
+    .sidebardivs.loaded {
+      opacity: 1;
+    }
+
+    /* Desktop icon sizes - make Home, Philosophy, Intelligence smaller */
+    @media screen and (min-width: 768px) {
+      .coursesside.homeicon,
+      .coursesside.rocketadjustment {
+        width: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+      }
+      
+      .coursesside.forum.ais:not(.bird) {
+        width: 25px !important;
+        min-width: 25px !important;
+        max-width: 25px !important;
+      }
+      
+      .coursesside.forum.ais.bird {
+        width: 24px !important;
+        min-width: 24px !important;
+        max-width: 24px !important;
+      }
+    }
+
+    /* Hide top-left logo on desktop */
+    @media screen and (min-width: 992px) {
+      .platformsectiontop > .platformtop.home {
+        display: none !important;
+      }
+    }
+
+    /* Hide top-left logo on tablets */
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .platformsectiontop > .platformtop.home {
+        display: none !important;
+      }
+    }
+
+    /* Mobile icon sizes */
+    @media screen and (max-width: 767px) {
+      /* For desktop sidebar icons if displayed on mobile (Home, Philosophy) */
+      .coursesside.homeicon,
+      .coursesside.rocketadjustment {
+        width: 14px !important; 
+        min-width: 14px !important;
+        max-width: 14px !important;
+      }
+
+      /* For icons in the main mobile navigation menu */
+      nav.mobilemenu img.coursesside.home,
+      nav.mobilemenu a[href="philosophy"] img.coursesside {
+        width: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+        height: auto !important;
+      }
+
+      nav.mobilemenu a[href*="advancers.ai"] img.coursesside,
+      nav.mobilemenu a[href*="birdinterface.com"] img.coursesside {
+        width: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+        height: auto !important;
+      }
+    }
+
+    /* Hover effects for sidebar links */
+    .linksidebar .text-block-15,
+    .linksidebar .text-block-15.coursestext,
+    .linksidebar .text-block-15.aitext {
+      color: #999 !important;
+      transition: color 0.2s ease;
+    }
+
+    .linksidebar:hover .text-block-15,
+    .linksidebar:hover .text-block-15.coursestext,
+    .linksidebar:hover .text-block-15.aitext {
+      color: #fff !important;
+    }
+
+    .linksidebar.w--current .text-block-15,
+    .linksidebar.w--current .text-block-15.coursestext,
+    .linksidebar.w--current .text-block-15.aitext {
+      color: #fff !important;
+    }
+
+    /* Ensure current page text is bold */
+    .linksidebar.w--current .text-block-15 { 
+      font-weight: 700 !important; 
+    }
+
+    /* Ensure "Home" with vboldc class is bold in current mobile menu item */
+    nav.mobilemenu a.linksidebar[href="index"][aria-current="page"] .text-block-15.vboldc {
+      font-weight: 700 !important;
+    }
+
+    /* Fix text alignment for Philosophy and Birdinterface */
+    .coursesside.rocketadjustment {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    
+    .coursesside.forum.ais.bird {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-top: 0 !important;
+    }
+    
+    /* .text-block-15.aitext.bird {
+      margin-left: 0 !important;
+    } */
+
+    /* Override the negative margin from .coursesside.forum.ais for bird icon */
+    .coursesside.forum.ais.bird {
+      margin-left: 0 !important;
+      /* padding-left: 0 !important; */
+    }
+
+    /* Ensure all sidebar icons have consistent spacing */
+    .coursesside {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    /* Make sidebar text more bold like text-block-24 */
+    .text-block-15,
+    .text-block-15.coursestext,
+    .text-block-15.aitext {
+      font-weight: 500 !important;
+    }
+
+    /* Remove card outlines on homepage */
+    .power-feature-card-container,
+    .break-down-card,
+    .tab-link,
+    .testimonail-slider-container,
+    .job-position-wrapper,
+    .ai-part,
+    .aimiddle {
+      border: none !important;
+    }
+
+    /* Remove sidebar item borders and backgrounds to prevent flickering */
+    .linksidebar,
+    .linksidebar:hover,
+    .linksidebar.w--current {
+      border: none !important;
+      background: none !important;
+      background-color: transparent !important;
+    }
+
+    /* Center-left alignment for AI description text on mobile */
+    @media screen and (max-width: 767px) {
+      .text-block-24 {
+        text-align: left !important;
+      }
+    }
+
+    /* Align Birdinterface text in desktop sidebar */
+    @media screen and (min-width: 768px) {
+      .linksidebar a[href*="birdinterface.com"] .text-block-15.aitext.bird {
+        /* Adjust this value as needed. This attempts to counteract any parent negative margins */
+        /* It might be better to identify the source of the negative margin on the icon/link and neutralize it there */
+         margin-left: 0px !important; /* Example: try to remove any specific bird text margin */
+      }
+      /* More general rule if specific text block has an unwanted default margin */
+      .linksidebar .text-block-15.aitext.bird {
+          /* General alignment if the icon itself is aligned via .coursesside */
+      }
+    }
+  </style>
+  <style>
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-top: 0px;
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .no-copy {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+      pointer-events: none;
+    }
+    .list-item {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 8px !important;  /* Reduced spacing between list items */
+    }
+    .list-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: 2;
+    }
+    @media print {
+      .no-copy {
+        display: none !important;
+      }
+    }
+    .textvideo2 {
+      margin-bottom: 30px !important;  /* Reduced space between sections */
+    }
+    .titlevideos1 {
+      margin-bottom: 12px !important;  /* Reduced space below titles */
+    }
+    .textsection {
+      margin-bottom: 25px !important;  /* Added spacing between text sections */
+    }
+    .textsection2 {
+      margin-top: 25px !important;  /* Consistent spacing for subsequent sections */
+    }
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 20px;  /* Reduced left padding of lists */
+    }
+  </style>
+</head>
+<body class="body-2">
+  <div data-animation="default" data-collapse="small" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="platformnavbartop w-nav">
+    <div class="platformsectiontop">
+      <div class="divarrowplustext">
+        <a id="pageBackLinkMobile" href="#" class="arrowback w-inline-block"><img src="images/Left-Arrow.svg" loading="lazy" alt="" class="image-5"></a>
+        <div class="text-block-17">Philosophy</div>
+      </div>
+      <a href="index" class="platformtop home w-inline-block"><img src="images/Unbenannt-6.png" loading="lazy" sizes="(max-width: 767px) 180px, (max-width: 991px) 46vw, 425px" srcset="images/Unbenannt-6-p-500.png 500w, images/Unbenannt-6-p-800.png 800w, images/Unbenannt-6-p-1080.png 1080w, images/Unbenannt-6.png 1500w" alt="" class="alogoimage newplatform"></a>
+      <div class="divarrowplustextdesktop">
+        <a id="pageBackLink" href="#" class="arrowback w-inline-block"><img src="images/Left-Arrow.svg" loading="lazy" alt="" class="image-5"></a>
+        <div class="text-block-17">Philosophy</div>
+      </div>
+      <nav role="navigation" class="nav-menu-3 mobilemenu w-nav-menu">
+        <a href="index" aria-current="page" class="linksidebar mobilenav menuitems w-inline-block w--current"><img src="images/icons8-t-65b-x-wing-starfighter-96-1.png" loading="eager" alt="" class="coursesside home">
+          <div class="text-block-15 coursestext vboldc">Home</div>
+        </a>
+        <a href="philosophy" class="linksidebar menuitems w-inline-block"><img src="images/Vector_4.png" loading="eager" alt="" class="coursesside">
+          <div class="text-block-15 coursestext">Philosophy</div>
+        </a>
+        <a href="https://advancers.ai/login" target="_blank" class="linksidebar menuitems w-inline-block"><img src="images/file.png" loading="eager" alt="" class="coursesside forum ais">
+          <div class="text-block-15">Intelligence</div>
+        </a>
+        <a href="https://birdinterface.com" target="_blank" class="linksidebar menuitems w-inline-block"><img src="images/Birdwhite.png" loading="eager" alt="" class="coursesside forum ais bird mobiledrop">
+          <div class="text-block-15 aitext bird">Birdinterface</div>
+        </a>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="menubuttontext">Menu</div><img src="images/Vector_1.png" loading="lazy" alt="" class="image-9">
+      </div>
+    </div>
+  </div>
+  <div class="sidebardivs">
+    <div id="w-node-b7655e20-a28e-8cf3-da82-860d53c60ac2-fda7e9b9" data-animation="default" data-collapse="tiny" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbarplatformside course6vh invideo w-nav">
+      <div id="w-node-b7655e20-a28e-8cf3-da82-860d53c60ac3-fda7e9b9" class="container-3 w-container">
+        <nav role="navigation" class="nav-menu-3 w-nav-menu">
+          <a href="index" class="linksidebar mobilenav menuitems w-inline-block"><img src="images/Home-Icon.svg" loading="lazy" alt="" class="coursesside homeicon">
+            <div class="text-block-15 coursestext boldtexthome">Home</div>
+          </a>
+          <a href="philosophy" class="linksidebar mobilenav menuitems w-inline-block"><img src="images/rocket.png" loading="lazy" alt="" class="coursesside rocketadjustment">
+            <div class="text-block-15 coursestext coursebold">Philosophy</div>
+          </a>
+        <a href="https://advancers.ai/login" target="_blank" class="linksidebar mobilenav menuitems w-inline-block"><img src="images/file.png" loading="lazy" alt="" class="coursesside forum ais">
+            <div class="text-block-15 aitext">Intelligence</div>
+          </a>
+          <a href="https://birdinterface.com" target="_blank" class="linksidebar mobilenav menuitems w-inline-block"><img src="images/Birdwhite.png" loading="lazy" alt="" class="coursesside forum ais bird">
+            <div class="text-block-15 aitext bird">Birdinterface</div>
+          </a>
+        </nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+      </div>
+      <div id="user-button" class="user-button w-node-b7655e20-a28e-8cf3-da82-860d53c60add-fda7e9b9"></div>
+    </div>
+    <div class="section librarypreview pplatformcourses invideo">
+      <div class="container containerlibrary platform">
+        <div class="videotitles">
+          <div class="videotitlesdiv">
+            <div class="videotitlestexttop">Alex Gisbrecht</div>
+            <div class="videotitlestext">The Advancers Philosophy</div>
+          </div>
+          <div class="circleleft"></div>
+        </div>
+        <div class="videocont">
+          <div class="code-embed-5 w-embed w-iframe">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <title>Responsive Vimeo Video</title>
+              <style>
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-top: 0px;
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+            </head>
+            <body>
+              <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/1077094266?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen="" title="0 - Introduction"></iframe>
+              </div>
+            </body>
+            </html>
+          </div>
+        </div>
+        <div class="textvideo2 allpages">
+          <div class="textsection">
+            <div class="titlevideos1">The future has to be exciting!</div>
+            <ul role="list">
+              <li class="list-item">Humanity is still super young. The first time we started writing (according to our records) was around 5.000 years ago in Mesopotamia. For reference, the Universe is 13.7B years old. 5.000 years relative to the universe's age, scaled to a 100-year human lifespan (for comparison), is about 0.0135 days (around 19 minutes). This is how young we are! If we actually were a single human and if we would live up to the current age of the universe (scaled to a 100 year human lifespan). Then, we are still in the hospital, we haven't even come out of the birth room yet. And we are certainly still unable to see clearly.</li>
+              <li class="list-item">No wonder our civilization is still a mess. No wonder our current systems and structures are misaligned with the best and most fundamental interests of the people. No wonder our education still doesn't actually empower individuals in their own pursuits so everyone can be most useful in their own very unique way.</li>
+              <li class="list-item">No wonder we are still in the process of curing all diseases, solving poverty and the biggest problems around the world. No wonder we still don't have transparent incentive structures and a direct democracy where the people are actually in power.</li>
+              <li class="list-item">Because we are still super young. We have only just seen the light of the day.</li>
+              <li class="list-item">But everything good that we have already created and solved, everything that already improves our lives, our understanding and our abilities was created by humans (just like you and me) that were here before us. And the greatest thing we can do (also the greatest recognition we can give to all who came before us) is to never stop seeking new knowledge, being creative and imaginative and constructive (which I call natural human striving) so we can advance our civilization and the human experience.</li>
+              <li class="list-item">What I am trying to do here is to widen our understanding through coming back to our very essence. Rethinking what it means to be human. And focusing on what's most important: Collective Advancement and Freedom. We will explore the two fundamental pillars that can lead to this world of improvement. How we can integrate them into our lives and become constructive Advancers ourselves. Building new value, working with great people on inspiring missions and learning to be optimistic about the future no matter the circumstance.</li>
+              <li class="list-item">I created this Philosophy from nearly 10 years of personal notes, my own curiosity, endless iterations and by doing the very things I will talk about. This is my third version of the Advancers Philosophy, if you are interested you can find the other two versions as playlists on my YouTube Channel to see where I came from, along with hundreds of videos that helped me build and refine this understanding. I feel very excited about the future and I hope after watching and understanding these videos you will feel the same.</li>
+              <li class="list-item">Knowledge is the most fundamental good and the ultimate creation of humanity. This is what we produce and create. This is what we produce and create through our curiosity, creativity and contribution. New knowledge lifts everyone up and enables everyone to create and do everything new we know. Without possessing any knowledge or striving for it we could not solve problems, do things, make things or even survive. We would constantly create problems and we would have to build our whole current understanding of reality from scratch. So the most fundamental good and the ultimate creation of humanity is knowledge. Think 10 thousand years into the future. If most of our civilization dies what will matter is knowledge and our memory of it. Only with knowledge can we rebuild our civilization, without it we might not make it. So knowledge is essential. And the best thing we can do (and it actually is our universal duty) is to advance our knowledge and our understanding. The way to advance our knowledge and contribute individually to collective advancement and freedom is through natural human striving (through being an Advancer) and through seeking natural human connection. Let's start with human striving. This breaks down into three parts. First of all, our curiosity and natural human striving is the greatest thing and most exciting thing in the whole universe (we have it as children and we must never lose it), but if we did, this is also the way to get it back. Our intelligence and ability to create new out of nothing is unparalleled.</li>
+              <li class="list-item">First, Our holy curiosity. Constantly seeking deep knowledge. And a better understanding. Constantly pursuing new and better knowledge. Lessening the gap between our understanding of reality and reality itself. Studying science, history, biographies from historical figures and seeking to understand how the defaults in society came to be the way they are which leads us to understand the current problems and where we are going. As Socrates said: "The unexamined life is not worth living." Knowledge gives us power. Knowledge makes us capable. Knowledge is the secret to everything. To everything that ever was and everything that ever will be. So our task both individually and collectively is to seek new knowledge and understanding and that also includes art, movies, music, games and virtual realities and memes, as these information forms can grasp and communicate concepts on a more profound level than words sometimes can. In our journey we should always have a scientific approach to understanding. Because the only knowledge we actually have is through experimentation. Through trying new things, through wondering, doing new things, finding new things out and assigning probabilities. So everything is just probability. Some things are more likely than others and only exist until proven wrong with something better. And that is really the glory of science and our existence. That we and our knowledge are ever evolving and infinite. Embracing this fact collectively will unleash and accelerate progress like we have never seen before. Solving long lived problems and improving life for everyone on earth. As an individual we want to never lose our curiosity. Keep exploring and finding new things out. Thinking critically. Understanding how things fundamentally work. We want to understand our history. This helps us understand the current nature of humanity, where we came from and where we are going as a civilization. The nature of humans. Which problems still exist, which discoveries need to be made, which advancements are due and what the latest creations are. It allows us to keep up with the pace of change and anticipate the next leaps. This gives us a better understanding of the reality we all find ourselves in and enables us to blaze our unique lights and be as constructive as we can be. This way we can identify possible futures that we find exciting, and devote our time and energy to one or a few of them. To make them happen!</li>
+              <li class="list-item">Creativity and imagination. Coming up with new and better ways of doing things. Imagining a better future. Imagination rules the world. Imagination is our superpower. The most value lies in creative and independent thinking and as a result having unique insights and better and better ideas that we can all build on. Coming up with new and better ways to provide value. Solving problems, saving people time, enhancing our productivity and enhancing the human experience. Using our imagination, Studying a lot and trusting our instincts. Taking time to think things through and conceptualize.</li>
+              <li class="list-item">Contribution and service. Getting things done. Working hard. Getting our ideas expressed out into the world. Actually advancing the world! Actually doing good.</li>
+              <li class="list-item">That was human striving. And the other important pillar that allows us to advance our knowledge is human connection:</li>
+              <li class="list-item">Appreciation and Respect. Appreciating people for who they actually are. Looking for the essence of people and their actions and what they are actually doing or trying to do. Not projecting from the outside and projecting weakness on them. But appreciating and respecting! Understanding! Deeply.</li>
+              <li class="list-item">This is how we advance our knowledge. Through human striving and human connection. This leads to collective advancement and increasing freedom for all. And we must do it (we actually have no choice) because there is only growth or decay in the universe! Either we are growing and expanding our existence or we are dying. And one of the best approaches to never get weak is thinking lightly about ourselves and deeply about the world and the universe. Being less "me" focused and more "us" focused. Because our actions are what matters! Also when you look in society, the happiest people are the ones that love their mission, their kids, their team more than they love themselves. And the unhappiest people are the ones that obsess about themselves rather than aspiring for something bigger! What gives us the ultimate fulfillment is: Effectively being constructive, having inspiring missions, building an amazing future and enhancing life for everyone. Human striving for betterment and advancement combined with deep human connections is the ultimate fulfillment. PERIOD! Also we have to obsess more over ideas and knowledge than over people and emotions. True enlightenment and transcendence can only come as a result of deep human striving, that is deep curiosity, deep creativity and deep contribution, and deep human connections, that includes deep respect and deep appreciation for the actions of people.</li>
+              <li class="list-item">Look around you, the world is full of problems and opportunities for improvement. If you look closely it is really a mess. And a ton of things that don't exist yet. So a lot to do! And also: Every time civilization moves a step forward it finds itself in a new environment with new opportunities, new problems, new knowledge to build on and where old and outdated thinking has to move on. Even in a post-scarcity society where all problems of the people are solved and all needs of the people are met, even then you can always create new things and advance civilization. In such a civilization advancement happens through new art, new activities, new movies, new experiences, new revelations, new creative pursuits because there are infinite ways of doing things and infinite angles to take. Also the quest to understand the universe will likely go on infinitely. SO: We have to always stay curious, study the world and pick what we want to solve-improve-create and do it. We have to be a participator, social benefactor and not a drainer. There are infinite ways to do things better, cooler and more exciting. And always will be.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="textvideo2 allpages">
+          <div class="textsection">
+            <div class="titlevideos1">Becoming an Advancer</div>
+            <ul role="list">
+              <li class="list-item">Becoming an Advancer or one could also say: Becoming Life. First of all, as an Advancer we totally embrace the two pillars that lead to collective advancement and freedom. Our natural human striving. And our natural way to appreciate and respect other human beings, that is human connection.</li>
+              <li class="list-item">As an Advancer we fundamentally understand that the origin of true value comes from our unique curiosity and our unique ideas. It comes from our independent thinking, creativity and imagination. From having unique and new insights. And finding new solutions to problems. And the actual creation of value then comes from our agency, energy, critical thinking, intelligence and ultimately our ability to make things happen in the real world. So: Having bold ideas and bringing them into the world. And what will help us is knowledge (a lot of it), also improving our communication skills, increasing our intelligence as well as emotional intelligence, having deliberate intensity and focus in what we are doing while being flexible when necessary.</li>
+              <li class="list-item">As an Advancer we are constructive, we solve problems, we try to do the right thing and make the future exciting. Therefore we naturally create that kind of hope and excitement about the future. We are deeply curious, seeking deep knowledge through having a scientific approach to understanding. As an Advancer we focus on lessening the gap between our understanding of reality and reality itself. Whenever doing research we go in with a hypothesis that we can then go on and test. We focus on things that without us wouldn't get done. That no one else is doing but that is highly relevant for the advancement of our civilization. If we get a lot of opposition for what we are doing, and we are doing the right thing. That is usually a good sign! Then we have to embrace what people dislike about us. Then what we are doing is something that is highly meaningful. That is good confirmation! Because if we do something that is already well known and understood, we wouldn't get opposition. We only get opposition for actual advancement and new things, because most people don't like change, even if it's better. But like I said, we have no other choice, because there is only growth or decay in the universe. Because life is a constant battle against entropy.</li>
+              <li class="list-item">As an Advancer everything that we do gets better. Because we are optimizing for improvement. Everywhere where we are, everything as a result aspires to get better. Not worse. Better! Better for the benefit of all.</li>
+              <li class="list-item">As an Advancer what matters is action. Resilience and determination. Having a high tolerance for failure. Learning from it as much as we can. Adjusting our thinking and changing behaviour. Adjusting our core assumptions and understanding what we did not understand before. Never giving up. Moving fast, getting things done and expressed into the world. Never losing momentum. Never getting complacent. Because this is deeply morally right and meaningful. We always ask ourselves: Are we doing things that are relevant for the world as we see it evolving?</li>
+              <li class="list-item">We gotta solve ALL PROBLEMS that come our way. Life's challenges are like missions in a video game. We need to complete them. From the beginning we gotta solve all problems and challenges that come our way. They are one of the best things for us. Because this is when we learn and grow most. So we have to embrace them and look forward to them. They are our greatest gifts for growth and improvement. The more we do, the more we learn. Our doing generates new relevant knowledge and data. And the hardest possible path is the most fulfilling.</li>
+              <li class="list-item">The truth about failure is that if you don't fail sometimes, we don't risk enough. So we need to be tolerant with failure and see it as an opportunity to learn and get better. The path to success runs through failure and failure's irrelevant unless it's disastrous. Innovation requires experimentation, otherwise we are not doing anything new. And if we are doing something new, we have to be ready for being misunderstood.</li>
+              <li class="list-item">And also: There is no risk! Risk is unreal unless it's death but there is no risk! Just images people create and reinforce in their head and then agree among each other to keep themselves from living.</li>
+              <li class="list-item">Life is supposed to be challenging. Otherwise it doesn't make any sense. The best things are hard. New things are new, because no one did them before. Easy things don't take you anywhere. It's not a good sign if someone's life is easy. There is only growth or decay! Never lose momentum! Losing momentum can kill us.</li>
+              <li class="list-item">We never give up and we never ever stop fighting for what we believe in!</li>
+              <li class="list-item">We never become complacent. Because complacency will kill us and make life infinitely boring. But life is here to be lived. Cherished. Life must be infinitely exciting! THIS IS WHAT GETS MOST PEOPLE IF THEY BECOME SUCCESSFUL, THEY GET COMPLACENT. OR FOCUS TOO MUCH ON THEIR EMOTIONS. Our emotions are not that important! What is important is what we do! Emotions follow actions. Our accomplishments and our service will make us feel proud and accomplished. Deep Human striving for usefulness and contribution plus deep human connections by appreciating and respecting people for their essence. These are the only real things! Because this leads to a future of freedom and collective advancement. Temporary pleasure and happiness is not real! These are traps that are usually used against us. Also we waste our emotions mindlessly for fear, anger, hatred, the reinforcement of weakness, instead of channelling our emotions toward our inspiration, imagination, curiosity and creativity. The greatest rewards and the greatest fulfillment comes from the doing and from real tangible improvement. From blazing our unique lights. And there are infinite things to do. For everyone. And using our emotions for productive measures is what will unlock the true potential of humanity. We have never experienced it before, but once we do, it will be truly magical.</li>
+              <li class="list-item">Also we should never come from a place of lack! Things in civilization have never been better. Always come from a place of abundance towards an even bigger place of abundance. Our mind has no boundaries. It has an infinite curiosity, infinite creativity and infinite imagination. Boundaries usually come from the external! Sparks of despair (instead of sparks of inspiration) usually come from the external.</li>
+              <li class="list-item">So we need to embrace our high natural energy, high natural intelligence, and high natural agency. People are also usually not fearful or anxious. Or hateful. This is instilled in them through bad and weak leadership. Naturally humans are very active, very creative, and very capable with the ability to think critically, solve problems while being emotionally intelligent. With wonderful sparks of inspiration.</li>
+              <li class="list-item">Our imagination is our greatest superpower. We have to use it and build an amazing future.</li>
+              <li class="list-item">This is the most real and most exciting way to live because it perfectly aligns with our active and intelligent nature. We are here to strive and deeply connect with people in the united battle against entropy that surrounds all life and everything around us and in creation of an exciting, hopeful and amazing future. That is perfectly aligned with the best interests of all people. So everyone can blaze his own unique light in his own unique way.</li>
+              <li class="list-item">Life has to be exciting! And it is only exciting if we make it exciting. If we keep striving through our curiosity and wonderment, creativity and imagination and contribution and constructiveness and keep seeking deep human connections through appreciation and respect. Which results in collective advancement and freedom for all. Which will lead us to our ultimate truth.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="textvideo2 allpages">
+          <div class="textsection">
+            <div class="titlevideos1">Building New Value</div>
+            <ul role="list">
+              <li class="list-item">In this knowledge piece we will go over building new value.</li>
+              <li class="list-item">What is value? Something is valuable if it is useful, if it solves a problem, if it does good for the world, if it saves time, if it enhances the human experience. If it allows us to do things faster, simpler, easier, with a better outcome. So we can focus more of our time on what's actually important. Because time is our most important resource. It never comes back. It's gone forever.</li>
+              <li class="list-item">Where to start? A good approach is to start creating value for ourselves and our fellow humans. Starting by solving the problems in our immediate environment, creating a perfect order and then gradually expanding from there. Doing things, all the time! and generating new knowledge and data. Also by starting in our immediate environment we gain a good initial understanding for what value actually is. Because it is not well teached in our civilization.</li>
+              <li class="list-item">Another good idea is thinking about how we want the future to be and imagining it in as much detail as possible. Through human striving and being curious we are constantly receiving new inspiration so we have the capacity to imagine an amazing future that advances civilization and the human experience. And then working our way to our products, experiences or arts. Never thinking of a single niche, but thinking of making it useful for all of humanity (at least striving for it), money is not important, advancement is, this has the most value and fulfillment anyway.</li>
+              <li class="list-item">Then before building new value we should make sure that what we are doing excites and inspires us most. A good way is to really ask ourselves, personally. What would make the future better? Thinking about what interests us most and what we find most exciting. Thinking about how we want the future to be. What problems and misalignments do we want to have solved? How could we make life better? And what future would truly excite us personally? Or if we are not satisfied with the current developments in an area, making it better. And in the process always thinking independently. Avoiding looking at what others are doing. Never doing things that are seen as good by society. But doing things that we see as important. Coming up with our own ideas. And this is also where the most value lies. In single-mindedness and coming up with new insights to making things fundamentally better.</li>
+              <li class="list-item">Also: We are already differentiated by nature. And we should stay naturally differentiated. Otherwise we'll be very replaceable. Lots of other people will be able to replace us if we begin to do the same things others are doing. The most value for the world and ourselves lies in our own unique path. That also means never thinking from analogies or based on traditional education or business models. Thinking fundamentally, aspiring for the truth, seeking the best ideas, looking at the incentives, seeking to understand. Never thinking that something is not possible, if it is in fact possible. Coming up with new insights, trends or developments that most don't see coming yet. Creating new markets or improving existing ones by an order of magnitude. Building something that is ahead of the curve by envisioning a better future and anticipating where the world is going by understanding history. Positioning ourselves in front of the next wave and building on foundational principles.</li>
+              <li class="list-item">Focusing on clarity and conciseness in what we are doing. Improving and adjusting our thinking every time we have better knowledge.</li>
+              <li class="list-item">Humans are made to build the future. It's in our nature to be curious, seek to understand, improve, create and grow. The missions we go after and spend our time on must be inspiring for us. So we can build something meaningful and actually affect change.</li>
+              <li class="list-item">Now. Let's move on. What is a company? A company is a team of great people that strive together towards an inspiring mission to create new value for the world. To solve problems, make things more efficient, save people time and money, and just fundamentally make the world a better place. Some companies are misaligned with that fact because they focus too much on money and on unimportant things, but the more we can align ourselves with advancement, the better. And remember this: The easiest companies to build are hard companies. Easy companies are hard because you'll only get bad people and there is low potential for actual impact.</li>
+              <li class="list-item">Also one thing that is also very important to understand is that: It is not about the amount of resources. Big companies are not very good at creating new things and making big leaps. It takes independent individuals to create a better and more exciting future. In fact, if you look at history, mostly individuals and smaller teams affected change. Individuals and dedicated teams that are willing to do whatever it takes. Because if they do nothing, either nothing will change or change will be bad.</li>
+              <li class="list-item">When we decide to go on this path of an Advancer (which is a good deal and very rewarding), because you are blazing your own unique light, embracing your natural curiosity, creativity and constructiveness, appreciating other humans for their contributions or what they are aspiring for, while building something of deep value for world. We need to make a long-term commitment. So we never ever ever give up. Because it's way easier to not give up if we do what we want and are fully committed. Also: Only then we can actually provide new fundamental value to civilization and actually affect change in a good way. Because great things are never short term projects. The best and most constructive companies in the world are at least 10-15 year projects. And at best, our visions about the future are so big that they extend our own lifespan. But not too far ahead that we cannot start now. It must be immediate enough so the world's ready for it and the technology is ready for it, and there is enough precondition in the world for it, with a long view vision behind it. Most new companies don't make long view commitments. Also most new companies are way too early than too late. They enter the market, when the world just isn't quite ready yet or the technology isn't quite ready yet and they give up right before it kicks off. That is why most companies are insignificant. Through short-term horizons, misalignment with true advancement and bad timing they find themselves in a place with only very little to no impact.</li>
+              <li class="list-item">So we have to make a true commitment and only focus on what we want to do, even if great other ideas come our way. We truly focus on finishing what we have started and if great things come our way, we just put them on our list for later or check how they might align or extend with the existing visions. That will lay the foundation for us to make way better decisions and achieve our missions.</li>
+              <li class="list-item">Now. When we build new value. We focus on being as useful as possible and providing real grounded value. We have to keep in mind that it has to be useful. That is the most important thing when building new value. It has to improve things on a fundamental level, not just on the surface. That's why when we do things, we always think fundamentally and question everything. And we should optimise for changing the lives of people.</li>
+              <li class="list-item">The second most important thing is the experience people have with our products. Making sure it is as compelling as possible, aesthetically most pleasing, and great to use. We should always create a great experience that people are excited about and that stays in their minds. If we make a compelling product, people will want it and people will tell others. And this is how our company grows.</li>
+              <li class="list-item">How to get to a great new product. Great new products are based on insights that most players systematically overlook. To find new insights we've to think fundamentally, understand, and ignore analogies. We think about what is most likely to be true and treat everything as a suggestion. Questioning everything. Thinking for ourselves. Building our own understanding and view of the world that is closer and closer aligned with reality. Making our own discoveries that can lay the foundation for a great new product. Asking ourselves: Which problems are not solved yet? Which problems are overlooked? What is overlooked in the attempt to solve a major problem? What should exist in the future? Those are the kinds of questions to find those insights that can lead to great new products. But also generally, having a deep curiosity and seeking deep knowledge will reveal many of them.</li>
+              <li class="list-item">Then: Making it happen. As we build our products we need to make sure to get into all the details, so we truly understand everything, what works and what doesn't, and so we get more information as we build our product.</li>
+              <li class="list-item">Finished products almost never come out the exact way we imagine them. Because when we envision it we don't have all the information for how it is going to work. We learn while building it, getting new data, iterating, and ultimately improving our initial design. Finished products often seem extremely simple (this is also when you know you have something great) but to get to a simple, elegant, new and compelling product, the path is extremely complicated. But in every of our stages of product development, we move quickly and decisively. We don't rely too much on analysis and more on our taste, feel for aesthetics and intuition, and making sure we move fast so we generate new knowledge and data we can learn from.</li>
+              <li class="list-item">And then once we have more information we begin to delete stuff. Cutting unnecessary parts. So our product becomes simpler and better over time. And we don't hold back on cutting too much. It's better to cut out more and then learn which parts are necessary, than cutting out too little and having a worse product. It usually takes three large iterations to make something great. But it doesn't stop there. After three we get into the sphere of good. But probably not great yet! So we keep innovating! Keep coming up with new and better ways of doing things to implement. That doesn't mean we should fill our product with feature after feature. Or that we should implement every piece the customers want. But it does mean that we should keep looking for new insights, keep getting more information, staying curious all the time. And fundamentally improving our product. We are the ones who have the big picture. We are the ones who decide what actually improves the customer experience in accordance with our vision and what actually makes the product better. And if we are misaligned on that, we must pivot slightly to make sure our product does what it's intended to do and serves.</li>
+              <li class="list-item">Now let's go through the points that lay the foundation for growing and being able to scale the company so we can have the biggest possible impact. First our product must be new and unique. It must be advanced in some way. So other people cannot copy it easily. There must be a gap between the current state of the art and our product. This is necessary so we can fulfill our vision and reinvest in the further advancement of it.</li>
+              <li class="list-item">Second, our product must improve with scale. So our competitive advantage grows over time and so competing players have a hard time catching up. Through better technology, lower prices through economies of scale, better insights, better experience, large number of users. The same is true for our margins as they should increase with scale for later innovation and growth cycles.</li>
+              <li class="list-item">And third: your product and the general appearance (including every touchpoint customers have with your product and your company) should be most pleasing. This helps people remember your company.</li>
+              <li class="list-item">Now when getting our first customers, we have to go where potential customers are and do things that don't scale first to get our first users. Also we should have no marketing budget. We should invest it in making our products better instead. And people must choose us intentionally because our products are so great/useful and not for some other reason or artificial attention through marketing. So the best way to grow is through word of mouth (only then we have a company, and only then we can grow), so we should not waste our time on marketing strategies, audience segments etc. The most important thing is building compelling products.</li>
+              <li class="list-item">When it comes to funding and raising money we should have our first big equity funding round as late as possible to keep as much equity as possible for later innovation/growth cycles. We should always try making money ourselves first or working with credit (long-term credit) and similar, rather than giving away equity. We should only raise big money for equity as soon as we have a reasonable valuation (>15M) so we don't give away too much and so we have enough equity for later growth cycles. Additionally we should partner up with investors that can see the long-term potential of the company and how our market will grow in the next 10 years.</li>
+              <li class="list-item">And last but not least as an Advancer we invest heavily in development and fulfilment of the mission, building great products, telling customers about them, creating the growth wave and repeating the cycle. We keep questioning the efficiency and making sure we don't become too bloated. That we don't spend too much time on marketing or finance. And spend more time on making our products awesome and as best as they can be. Things must get done. So we make fast growth and progress, and bringing our products into the world, our main priority while maintaining growth and momentum.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="textvideo2 allpages">
+          <div class="textsection">
+            <div class="titlevideos1">Advancer Teams</div>
+            <ul role="list">
+              <li class="list-item">Advancer teams form only around exciting and fundamentally constructive missions. Like I said before, it is way easier to start a hard company than an easy company. We get way better people, it's easier to recruit, it's easier to get funding, it's easier to build because you can imagine and build the future from the ground up, and you have less competition. Sometimes even none.</li>
+              <li class="list-item">Also only small teams of great people change the world. Large teams are too slow. The most intelligent people in civilization are more than 100-1000x more productive and insightful than normal people.</li>
+              <li class="list-item">Groups without a goal usually look for acceptance with all members of the group (or consensus). So direction and vision is important! And great leadership. Otherwise there is chaos and entropy. No direction. So vision and leadership matters!</li>
+              <li class="list-item">And great leaders empower people to shine and do work that is bigger than themselves. Great leaders are selfless and put their focus on their team and the mission. Great leaders work the hardest and set the standard for the whole company. People will find great leaders a bit harsh at times. But as a leader our goal is not to be liked. The mission is the most important thing. And we must lead the way. In a way that increases our hope and excitement about the future. And building the future is supposed to be hard, because it doesn't exist yet. We have to make it happen! If things are easy they are meaningless. We encourage our team to challenge the status quo and bring fresh ideas to the table. We foster a culture of advancement and merit. The best ideas win no matter what and the mission is the most important thing.</li>
+              <li class="list-item">In recruiting people we look for extraordinary people with a constructive track record and/or great potential. The best people are usually young, agentic and intelligent. We hire the best people for the best salaries than pretty good people for good salaries.</li>
+              <li class="list-item">Regarding the location of our time it is incredibly important to have our own HQs where we work in person. HQs are necessary to achieve missions with a team. Otherwise the spirit is lost. People need to be fully committed. Either people are on the ship or off the ship. Full commitment or nothing.</li>
+              <li class="list-item">The structure should be flat. We always have just one person in charge of at least one area. We have low hierarchies and we let information flow freely. We never get an eye off our mission. We move fast. And the mission is the most important thing.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="textvideo2 allpages">
+          <div class="textsection">
+            <div class="titlevideos1">Beware of Misaligned Structures</div>
+            <ul role="list">
+              <li class="list-item">We are careful with all people who oppose progress, advancement and human flourishing and who don't let the best ideas win. These are usually people who don't use their mental energy to think things through. Being an Advancer requires mental strength because you are constantly iterating on new and better knowledge.</li>
+              <li class="list-item">When there is a period of slow productivity growth or less people are constructive and advancing civilization then that means that there is some force within society that is stopping them (usually it is outdated power structures including deliberate bureaucracies and outdated thinking) and/or it is a time where weakness is reinforced rather than strength. When weakness is reinforced you see a rise in complacency and in people putting an overemphasis on feelings and emotion.</li>
+              <li class="list-item">People increasingly conflate the appearance and feeling of goodness (seeming good and status games) rather than its actual reality (actually doing good). You also see a rise in low intelligence, low information people. Plus there is an unnecessary complexity in the results which hides incompetence. And when strength is reinforced there is progress, high productivity and simplicity in the results which comes from critical thinking, seeking truth and expanding our knowledge through doing and building new things. Weak people are guided by emotion and fear. Strong people are guided by intelligence and new and better knowledge. The strong are the only real good people. Because they actually do good things. The weak just tries to avoid doing them and is therefore more egoistic. And all the things the weak say about the strong, they are themselves! And they do this only because they lack it. They are really talking about themselves. Because talk is self-portrayal. No strong one is doing this. The more weak people come together, the more their weakness gets reinforced. This also applies to power. When weak people get power, their weakness and bad thinking and egoism is just going to get reinforced. Meaning more power doesn't make them better, it makes them worse.</li>
+              <li class="list-item">Furthermore we should beware of education that makes us think the pie is fixed and that we have to take away from others in order to contribute. This is fundamentally wrong. The pie is not fixed. The pie has always grown and the pie will always continue to grow unless we have an internal force that is stopping people from being productive for civilization (usually it is outdated power structures and outdated thinking). What matters in society is how productive we are for civilization. If everyone is doing useful things, solving problems and advancing our knowledge. Everybody benefits. And everybody feels how life is getting better month after month. And there is this optimism and hope about the future. Suddenly we see opportunities to contribute everywhere. This is collective progress. If you win, I win. It lifts everyone up. And as I said before: Money is not important. Usefulness is. Advancement is. Then money will never be a problem. We must always beware of thinking that money is the most important thing. Society makes us think that very easily. True wealth is not assets or money. True wealth is being young, having the freedom to be curious, creative and constructive. To have ideas, energy and agency. True wealth is leaving your own trail of existence that benefited the world and the people you care about. Money will never bring such fulfillment as this. People who chase money often have the least amount of freedom. We cherish our freedom to advance.</li>
+              <li class="list-item">We avoid generalized education. All education is indoctrination unless it fundamentally adapts to us and empowers us in our own pursuit or if it only teaches the fundamentals like I do here. Generalized education makes everyone think the same way. This makes everyone replaceable which has no value for civilization. We build our own understanding based on science and good explanations that are not subjectively variable. Coming up with our own ideas, testing them, learning from our own mistakes and iterating. Education promises to give us shortcuts. We should never take them. They will cut us short. The most value comes from creative and independent thinking and advancing civilization (making things fundamentally better). Embracing our own curiosity for knowledge and the new, creativity and imagination and actual contribution will make us irreplaceable. We must beware of societies using our feelings against us. We should always think critically and seek knowledge and understanding.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="textvideo2 allpages">
+          <div class="textsection">
+            <div class="titlevideos1">The future must be exciting!</div>
+            <ul role="list">
+              <li class="list-item">The future must be exciting! And the future will only get better if we actively make it better. And we can all do so through human striving and human connection. We are here because we are meant to shine. To blaze our light and our own trail of existence! In our own very unique way. And if more of us focus on collective advancement and freedom through human striving and human connection, we can bring our civilization into an exciting future where everything adapts to the best interests of the people and empowers them in their own pursuits, ultimately liberating all people to be curious, creative and constructive themselves!</li>
+              <li class="list-item">We have to be optimistic about the future. Never ceasing from building and creating new things, being constructive and generating new scientific knowledge and understanding through our individual and collective efforts leading to advances in our civilization. This strength can reinforce more strength. But if we are weak, let ourselves get distracted all the time, create problems and build structures and systems that are not in the best interests of all, if we continue to think that the pie is fixed, this will also reinforce itself and amplify into a worse future of deep and complex bureaucracies, conformity, dependence, surveillance, increasing rates of autism, too heavy focus on emotions, entitlement, the constant reinforcement of weaknesses and the deliberate undermining of human potential. And I think that alone is worth reigniting our human essence and striving together towards a future of collective advancement and freedom, leading to infinite potential and a win-win situation for all.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="audios" style="display: block;">
+          <div class="audio11" style="width: 100%;">
+            <div class="audio1" style="width: 100%;">
+              <div class="audiotitle">Audio Recording</div>
+            </div>
+            <div class="audiotrack" style="width: 100%;">
+              <div tmplayer-init="true" class="audiotrackvideostap" style="width: 100%;">
+                <div class="html-embed-10 w-embed w-script"><!--  [Attributes by True Media Player] Audio Player Plugin  -->
+                  <script src="https://trueaudioplayer.b-cdn.net/true-audio-player@1.1.1.min.js" type="text/javascript"></script>
+                  <!--  Audio Player HTML Structure  -->
+                  <div id="player1" tmplayer-init="true" class="sp-track-wrapper is-paused">
+                    <div class="sp-track">
+                      <div class="sp-controla-wrapper">
+                        <!--  Play/Pause Button  -->
+                        <button id="playPauseButton" class="sp-play-pause-button">
+                          <img id="playIcon" src="https://assets-global.website-files.com/65573c446874868ee0fa68b5/65b956f929dc6346803c61e2_play-button.webp" tmplayer-button="play" alt="" class="sp-play">
+                          <img id="pauseIcon" src="https://assets-global.website-files.com/65573c446874868ee0fa68b5/65b95581843336ede761a84b_Stop_fill.svg" tmplayer-button="pause" alt="" class="sp-pause" style="display: none;">
+                        </button>
+                        <!--  Progress Bar and Time  -->
+                        <div class="sp-media-player-bar-wrapper">
+                          <div tmplayer-element="progress-bar-wrapper" class="sp-progress-bar-wrapper">
+                            <div class="sp-progress-bar-background">
+                              <div id="progressBar" tmplayer-element="progress-bar" class="progress-bar" style="width: 0%;">
+                                <div class="true-progress-head"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sp-time-wrapper">
+                            <div tmplayer-element="elapsed" id="currentTime" class="sp-elapsed">0:00</div>
+                            <div>&nbsp;/&nbsp;</div>
+                            <div tmplayer-element="duration" id="duration" class="sp-duration">0:00</div>
+                          </div>
+                          <!--  Playback Speed Control  -->
+                          <div class="sp-playback-speed">
+                            <select id="playbackRate" style="color: white; background-color: black;">
+                              <option value="0.5">0.5×</option>
+                              <option value="0.75">0.75×</option>
+                              <option value="1" selected="">1×</option>
+                              <option value="1.25">1.25×</option>
+                              <option value="1.5">1.5×</option>
+                              <option value="1.75">1.75×</option>
+                              <option value="2">2×</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  Audio Element  -->
+                      <audio id="audioPlayer" preload="metadata" style="display: none;">
+                        <source src="https://audio-proxy.vercel.app/api/streamAudio?fileId=CNX9QKG7aWKP5lh8UIAN1cMcR3XdQmoi" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                  </div>
+                  <!--  Additional JavaScript to Handle Player Initialization and Media Session  -->
+                  <script>
+(function() {
+  const playerContainer = document.getElementById('player1');
+  const audioPlayer = document.getElementById('audioPlayer');
+  const playPauseButton = document.getElementById('playPauseButton');
+  const playIcon = document.getElementById('playIcon');
+  const pauseIcon = document.getElementById('pauseIcon');
+  const progressBar = document.getElementById('progressBar');
+  const progressBarBackground = playerContainer.querySelector('.sp-progress-bar-background');
+  const currentTimeElement = document.getElementById('currentTime');
+  const durationElement = document.getElementById('duration');
+  const playbackRateSelector = document.getElementById('playbackRate');
+  // Set initial playback rate
+  audioPlayer.playbackRate = parseFloat(playbackRateSelector.value);
+  // Set Media Session Metadata immediately
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: 'Building New Value',
+      artist: 'ADVANCERS',
+      album: 'Building New Value',
+      artwork: [
+        {
+          src: 'https://cdn.prod.website-files.com/669a956cb6a32d8d7719ee36/66fef0b24ef79d0cdcc7c2f0_Design%20ohne%20Titel%20(10).png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
+    });
+  }
+  // Update duration once metadata is loaded
+  audioPlayer.addEventListener('loadedmetadata', function() {
+    durationElement.textContent = formatTime(audioPlayer.duration);
+  });
+  // Play or pause audio
+  playPauseButton.addEventListener('click', function() {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+    } else {
+      audioPlayer.pause();
+    }
+  });
+  // Update play/pause icons and pause other players
+  audioPlayer.addEventListener('play', function() {
+    // Pause other audio players
+    const audios = document.querySelectorAll('audio');
+    audios.forEach(function(audio) {
+      if (audio !== audioPlayer) {
+        audio.pause();
+      }
+    });
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = '';
+    playerContainer.classList.remove('is-paused');
+    playerContainer.classList.add('is-playing');
+  });
+  audioPlayer.addEventListener('pause', function() {
+    playIcon.style.display = '';
+    pauseIcon.style.display = 'none';
+    playerContainer.classList.remove('is-playing');
+    playerContainer.classList.add('is-paused');
+  });
+  // Update progress bar and time
+  audioPlayer.addEventListener('timeupdate', function() {
+    const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    progressBar.style.width = percent + '%';
+    currentTimeElement.textContent = formatTime(audioPlayer.currentTime);
+  });
+  // Seek when progress bar is clicked
+  progressBarBackground.addEventListener('click', function(e) {
+    seek(e.clientX);
+  });
+  // Drag to seek functionality
+  let isDragging = false;
+  const seek = (clientX) => {
+    const rect = progressBarBackground.getBoundingClientRect();
+    let offsetX = clientX - rect.left;
+    offsetX = Math.max(0, Math.min(offsetX, rect.width));
+    const percent = offsetX / rect.width;
+    progressBar.style.width = percent * 100 + '%';
+    audioPlayer.currentTime = percent * audioPlayer.duration;
+    currentTimeElement.textContent = formatTime(percent * audioPlayer.duration);
+  };
+  // Mouse Events
+  progressBarBackground.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    seek(e.clientX);
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+      seek(e.clientX);
+    }
+  });
+  document.addEventListener('mouseup', function() {
+    if (isDragging) {
+      isDragging = false;
+    }
+  });
+  // Touch Events
+  progressBarBackground.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    const touch = e.touches[0];
+    seek(touch.clientX);
+    e.preventDefault();
+  });
+  document.addEventListener('touchmove', function(e) {
+    if (isDragging) {
+      const touch = e.touches[0];
+      seek(touch.clientX);
+      e.preventDefault();
+    }
+  });
+  document.addEventListener('touchend', function() {
+    if (isDragging) {
+      isDragging = false;
+    }
+  });
+  // Change playback speed
+  playbackRateSelector.addEventListener('change', function() {
+    audioPlayer.playbackRate = parseFloat(this.value);
+  });
+  // Helper function to format time
+  function formatTime(time) {
+    if (isNaN(time)) return '0:00';
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+    return minutes + ':' + seconds;
+  }
+})();
+</script>
+                  <!--  CSS to Adjust Play Button Position  -->
+                  <style>
+.sp-time-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  white-space: nowrap;
+  padding-right: 10px;
+  padding-left: 12px;
+}
+.sp-progress-bar-background {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-left: 0px;
+}
+.progress-bar {
+  margin: 0;
+}
+.sp-progress-bar-wrapper {
+  margin: 0;
+}
+#playPauseButton {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px dashed transparent;
+  border-radius: 100%;
+  background: transparent;
+  transform: translateX(-8px);
+}
+</style>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="textvideo-copyright">
+          <div class="textblockvideo">
+            <a href="https://www.advancers.org/" target="_blank" class="copyrightvideo">© 2025 Bird Interfaces, GmbH.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=669a956cb6a32d8d7719ee36" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var desktopReturnButton = document.getElementById('pageBackLink');
+    if (desktopReturnButton) {
+      desktopReturnButton.addEventListener('click', function(event) { 
+        event.preventDefault(); 
+        window.history.back();
+      });
+    }
+
+    var mobileReturnButton = document.getElementById('pageBackLinkMobile');
+    if (mobileReturnButton) {
+      mobileReturnButton.addEventListener('click', function(event) { 
+        event.preventDefault(); 
+        window.history.back();
+      });
+    }
+    
+    // Fix sidebar flickering by adding loaded class
+    var sidebar = document.querySelector('.sidebardivs');
+    if (sidebar) {
+      sidebar.classList.add('loaded');
+    }
+  });
+</script><!--  [Attributes by True Media Player] Audio Player Plugin  -->
+  <script src="https://trueaudioplayer.b-cdn.net/true-audio-player@1.1.1.min.js" type="text/javascript"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Prevent right click
+      document.addEventListener('contextmenu', function(e) {
+        if (e.target.closest('.no-copy')) {
+          e.preventDefault();
+        }
+      });
+      
+      // Prevent keyboard shortcuts
+      document.addEventListener('keydown', function(e) {
+        if (e.target.closest('.no-copy')) {
+          if ((e.ctrlKey || e.metaKey) && 
+              (e.key === 'c' || e.key === 'C' || 
+               e.key === 'u' || e.key === 'U' ||
+               e.key === 's' || e.key === 'S' ||
+               e.key === 'p' || e.key === 'P' ||
+               e.key === 'a' || e.key === 'A')) {
+            e.preventDefault();
+          }
+        }
+      });
+  });
+</script>
+</body>
+</html>
